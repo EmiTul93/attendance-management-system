@@ -1,19 +1,22 @@
-package com.example.attendance_management_system.Entities;
+package com.example.attendance_management_system.DTO;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+public class UserDTO {
 
-public class UserEntity {
-
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String surname;
     private String email;
     private String password;
     private String role; //"ADMIN", "STUDENT", "FACULTY"
+
+    public UserDTO(Long id, String name, String surname, String email, String password, String role) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
 
     public Long getId() {
         return id;
